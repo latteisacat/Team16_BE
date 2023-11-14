@@ -11,4 +11,4 @@ RUN gradle wrapper
 
 RUN gradle clean bootJar
 
-CMD ["java", "-jar", "-Dspring.profiles.active=production", "-Duser.timezone=Asia/Seoul", "/home/gradle/project/build/libs/animory-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "-Dspring.profiles.active=production", "-Duser.timezone=Asia/Seoul","-Dhttp.proxyHost=krmp-proxy.9rum.cc", "-Dhttp.proxyPort=3128" ,"/home/gradle/project/build/libs/animory-0.0.1-SNAPSHOT.jar"]
